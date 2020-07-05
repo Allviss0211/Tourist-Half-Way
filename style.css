@@ -90,9 +90,9 @@ body{
     background-size: contain;
     width: 80px;
     height: 80px;
-    top: 30%;
+    top: 70%;
     left: 0;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); 
     animation: fish 20s linear infinite;
 }
 
@@ -104,21 +104,24 @@ body{
     top: 50%;
     left: 0;
     transform: rotateY(180deg);
-    animation: fish 18s linear infinite;
+    animation: fish 5s linear infinite;
 }
 @keyframes fish{
-    0%{
+    0% {
         left: 0;
         top: 70%;
         transform: rotateY(180deg);
-    }50%{
-        left: calc(100%-100px);
+    } 
+    50% {
+        left: calc(100%-80px);
         top:40%;
-        transform: rotateY(180deg);
-    }50.01%{
+        transform: rotateY(180  deg);
+    }
+    50.01% {
         transform: rotateY(0deg);
         top: 40%;
-    }100%{
+    } 
+    100% {
         left: 0;
         top: 70%;
         transform: rotateY(0deg);
@@ -129,18 +132,18 @@ body{
     0%{
         left: 0;
         top: 50%;
-        transform: rotateY(180deg);
+        transform: rotateX(180deg);
     }50%{
         left: calc(100%-100px);
         top:60%;
-        transform: rotateY(180deg);
+        transform: rotateX(180deg);
     }50.01%{
-        transform: rotateY(0deg);
+        transform: rotateX(0deg);
         top: 60%;
     }100%{
         left: 0;
         top: 50%;
-        transform: rotateY(0deg);
+        transform: rotateX(0deg);
 
     }
 }
