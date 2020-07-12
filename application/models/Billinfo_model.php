@@ -24,7 +24,7 @@ class Billinfo_model extends CI_Model
      */
     function get_all_billinfo()
     {
-        $this->db->order_by('IdBillInfo', 'desc');
+        $this->db->order_by('IdBillInfo', 'asc');
         return $this->db->get('billinfo')->result_array();
     }
         
