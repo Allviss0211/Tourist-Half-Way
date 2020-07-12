@@ -24,7 +24,7 @@ class Bill_model extends CI_Model
      */
     function get_all_bill()
     {
-        $this->db->order_by('IdBill', 'desc');
+        $this->db->order_by('IdBill', 'asc');
         return $this->db->get('bill')->result_array();
     }
         
