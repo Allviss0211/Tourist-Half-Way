@@ -24,7 +24,7 @@ class Tourtype_model extends CI_Model
      */
     function get_all_tourtype()
     {
-        $this->db->order_by('IdTourType', 'desc');
+        $this->db->order_by('IdTourType', 'asc');
         return $this->db->get('tourtype')->result_array();
     }
         
