@@ -14,17 +14,6 @@ class Tour_model extends CI_Model
     {
         return $this->db->get_where('tour',array('IdTour'=>(int)$IdTour))->row_array();
     }
-
-    /*
-     * Get tour by IdTour
-     */
-    function count_tour_by_tourtype($IdTourType)
-    {
-        $this->db->select();
-        $this->db->from();
-        $this->db->where();
-        $this->db->groupby();
-    }
         
     /*
      * Get tour by IdTourType
@@ -72,9 +61,9 @@ class Tour_model extends CI_Model
         return $this->db->delete('tour',array('IdTour'=>$IdTour));
     }
 
-    // function count_tour_by_tourtype()
-    // {
-    //     $query = $this->db->query("SELECT COUNT(IF(IdTourType = 1,1,NULL)) as 'Trong nước', COUNT(IF(IdTourType = 2,1,NULL)) as 'Ngoài nước' FROM tour");  
-    //     return $query->result_array();   
-    // }
+    function count_tour_by_tourtype()
+    {
+        $query = $this->db->query("SELECT COUNT(IF(IdTourType = 1,1,NULL)) as 'Trong nước', COUNT(IF(IdTourType = 2,1,NULL)) as 'Ngoài nước' FROM tour");  
+        return $query->result_array();   
+    }
 }
