@@ -53,6 +53,11 @@ class User_model extends CI_Model
         return $this->db->update('user',$params);
     }
     
+    function update_password($username, $params)
+    {
+        $this->db->where('Username', $username);
+        return $this->db->update('user', array("Password" => $params));
+    }
     /*
      * function to delete user
      */

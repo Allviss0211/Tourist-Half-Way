@@ -58,7 +58,7 @@
 
 
 
-                <div class="thw-section-btn align-right py-4"><a class="btn btn-danger display-4" href="<?= site_url("cart?id=$tour[IdTour]") ?>"><?php echo number_format("$tour[Price]") . "đ" ?></a></div>
+                <div class="thw-section-btn align-right py-4"><a class="btn btn-danger display-4" href="<?= site_url("cart?id=$tour[IdTour]") ?>">Đặt vé</a></div>
 
 
 

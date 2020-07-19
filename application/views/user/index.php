@@ -38,12 +38,15 @@
 							<td><?php echo $u['Note']; ?></td>
 							<td>
 								<a href="<?php echo site_url('user/edit/' . $u['IdUser']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Sửa</a>
-								<button onclick="document.getElementById('noti').style.display='block'" style="width:auto;" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Xóa</button>
+								<a href="<?php echo site_url('user/remove/' . $u['IdUser']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Xóa</a>
+								<!-- <button onclick="document.getElementById('noti').style.display='block'" style="width:auto;" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Xóa</button> -->
 							</td>
 						</tr>
+						
 					<?php } ?>
+
 				</table>
-				<div id="noti" class="noti">
+				<!-- <div id="noti" class="noti">
 					<form class="noti-content animate" action="" style="width: 350px; height: 100px;">
 						<div class="box-body">
 
@@ -56,9 +59,9 @@
 									</th>
 								</tr>
 								<tr>
-									<td><button type="button" onclick="document.getElementById('noti').style.display='none'" class="btn btn-danger btn-xs">
+									<td><a type="button" onclick="document.getElementById('noti').style.display='none'" href="<?php echo site_url('user/remove/' . $u['IdUser']); ?>" class="btn btn-danger btn-xs">
 											<div style="width: 70px; height:20px; text-align: center;">Có</div>
-										</button></td>
+										</a></td>
 									<td><button type="button" onclick="document.getElementById('noti').style.display='none'" class="btn btn-info btn-xs">
 											<div style="width: 70px; height:20px; text-align: center;">Không</div>
 										</button></td>
@@ -77,7 +80,7 @@
 							modal.style.display = "none";
 						}
 					}
-				</script>
+				</script> -->
 			</div>
 		</div>
 	</div>
