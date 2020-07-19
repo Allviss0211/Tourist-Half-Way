@@ -73,7 +73,7 @@ class User extends CI_Controller
 
                         'Username' => $this->input->post('Username'),
 
-                        'Password' => $this->input->post('Password'),
+                        'Password' => md5($this->input->post('Password')),
 
                         'IdDecentralization' => $this->input->post('IdDecentralization'),
 
@@ -145,7 +145,7 @@ class User extends CI_Controller
 
                             'Username' => $this->input->post('Username'),
 
-                            'Password' => $this->input->post('Password'),
+                            'Password' => md5($this->input->post('Password')),
 
                             'Fullname' => $this->input->post('Fullname'),
 
@@ -214,7 +214,7 @@ class User extends CI_Controller
 
                             'Username' => $this->input->post('Username'),
 
-                            'Password' => $this->input->post('Password'),
+                            'Password' => md5($this->input->post('Password')),
 
                             'IdDecentralization' => $this->input->post('IdDecentralization'),
 
@@ -312,7 +312,7 @@ class User extends CI_Controller
 
             if ($userName != "" && $passWord != "") {
 
-                $row = $this->User_model->login($userName, $passWord);
+                $row = $this->User_model->login($userName, md5($passWord));
 
                 if ($row) {
 
@@ -353,7 +353,7 @@ class User extends CI_Controller
 
                 'Username' => $this->input->post('txtUsernameSignup'),
 
-                'Password' => $this->input->post('txtPasswordSignUp'),
+                'Password' => md5($this->input->post('txtPasswordSignUp')),
 
                 'IdDecentralization' => '2',
 
