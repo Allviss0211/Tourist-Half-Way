@@ -81,7 +81,7 @@ class User extends CI_Controller
 
                         'IdentityCard' => $this->input->post('IdentityCard'),
 
-                        'Birthday' => $this->input->post('Birthday'),
+                        'Birthday' => $this->input->post('Birthday') != NULL ? $this->input->post('Birthday') : date("Y-m-d"),
 
                         'Phone' => $this->input->post('Phone'),
 
@@ -203,8 +203,6 @@ class User extends CI_Controller
                 // check if the user exists before trying to edit it
 
                 $data['user'] = $this->User_model->get_user($IdUser);
-
-
 
                 if (isset($data['user']['IdUser'])) {
 
