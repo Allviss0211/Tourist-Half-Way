@@ -49,7 +49,6 @@
     <!-- Font Awesome -->
 
 
-
     <link rel="stylesheet" href="<?php echo site_url('/resources/css/font-awesome.min.css'); ?>">
 
 
