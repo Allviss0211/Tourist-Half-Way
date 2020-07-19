@@ -44,19 +44,27 @@
 					<?php } ?>
 				</table>
 				<div id="noti" class="noti">
-					<form class="noti-content animate" action="">
-						<div class="container">
-							<table style="background-color:#f1f1f1">
-								<tr rowspan="2">
-									<p>Bạn có chắc chắn muốn xóa?</p>
+					<form class="noti-content animate" action="" style="width: 350px; height: 100px;">
+						<div class="box-body">
+
+							<table class="table table-striped">
+								<tr>
+									<th>
+										<div style="text-align: center; width:auto;">
+											<p>Bạn có chắc chắn muốn xóa?</p>
+										</div>
+									</th>
 								</tr>
 								<tr>
-									<td><a href="<?php echo site_url('user/remove/' . $u['IdUser']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span>Có</a></td>
-									<td><button type="button" onclick="document.getElementById('noti').style.display='none'" class="btn btn-info btn-xs">Không</button></td>
+									<td><button type="button" onclick="document.getElementById('noti').style.display='none'" class="btn btn-danger btn-xs">
+											<div style="width: 70px; height:20px; text-align: center;">Có</div>
+										</button></td>
+									<td><button type="button" onclick="document.getElementById('noti').style.display='none'" class="btn btn-info btn-xs">
+											<div style="width: 70px; height:20px; text-align: center;">Không</div>
+										</button></td>
 								</tr>
 							</table>
 						</div>
-
 					</form>
 				</div>
 				<script>

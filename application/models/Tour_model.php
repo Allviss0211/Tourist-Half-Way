@@ -66,4 +66,10 @@ class Tour_model extends CI_Model
         $query = $this->db->query("SELECT COUNT(IF(IdTourType = 1,1,NULL)) as 'Trong nước', COUNT(IF(IdTourType = 2,1,NULL)) as 'Ngoài nước' FROM tour");  
         return $query->result_array();   
     }
+
+    function search_tour($name)
+    {
+        $this->db->select("*");
+        
+    }
 }
