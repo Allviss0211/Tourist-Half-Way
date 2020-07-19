@@ -64,7 +64,7 @@
 
 						<td><?php echo $b['Status']; ?></td>
 
-						<td><?php echo $this->Tour_model->get_tour($b['IdTour'])['Name']; ?></td>
+						<td><?php echo $b['Name'] ?></td>
 
 						<td><?php echo $b['CustomerName']; ?></td>
 

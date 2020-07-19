@@ -21,8 +21,11 @@ class Bill_model extends CI_Model
      */
     function get_all_bill()
     {
-        $this->db->order_by('IdBill', 'asc');
-        return $this->db->get('bill')->result_array();
+        $this->db->select('IdBill, OrderDate, Status, tour.Name, NoChildren, NoAdult, TotalPrice, CustomerName, CustomerIdentityCard, CustomerBirthday, CustomerAddress, CustomerPhone, CustomerEmail, bill.Note');
+        $this->db->from('bill');
+        $this->db->join('tour', 'tour.IdTour = bill.IdTour');
+        $this->db->order_by('OrderDate', 'asc');
+        return $this->db->get()->result_array();
     }
         
     /*

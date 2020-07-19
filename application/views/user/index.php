@@ -43,7 +43,11 @@
 						</tr>
 					<?php } ?>
 				</table>
-				<div id="noti" class="noti">
+			</div>
+		</div>
+	</div>
+</div>
+<div id="noti" class="noti">
 					<form class="noti-content animate" action="" style="width: 350px; height: 105px;">
 						<div class="box-header">
 							<div style="text-align: center; width:auto;">
@@ -54,9 +58,9 @@
 							<div class=" row clearfix">
 								<div class="col-md-6">
 									<div class="form-group">
-										<button type="submit" id="<?php $u['IdUser'] ?>" class="btn btn-danger">
+										<a href="<?php echo site_url('user/remove/' . $u['IdUser']); ?>" class="btn btn-danger">
 											<div style="width: 122px; height:20px; text-align: center;">Có</div>
-										</button>
+										</a>
 									</div>
 								</div>
 								<div class="col-md-6">
@@ -70,6 +74,7 @@
 						</div>
 					</form>
 				</div>
+
 				<script>
 					// Get the modal
 					var modal = document.getElementById('noti');
@@ -81,12 +86,3 @@
 						}
 					}
 				</script>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<script>
-	
-</script>
