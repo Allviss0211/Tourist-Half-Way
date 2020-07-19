@@ -44,26 +44,29 @@
 					<?php } ?>
 				</table>
 				<div id="noti" class="noti">
-					<form class="noti-content animate" action="" style="width: 350px; height: 100px;">
+					<form class="noti-content animate" action="" style="width: 350px; height: 105px;">
+						<div class="box-header">
+							<div style="text-align: center; width:auto;">
+								<p>Bạn có chắc chắn muốn xóa?</p>
+							</div>
+						</div>
 						<div class="box-body">
-
-							<table class="table table-striped">
-								<tr>
-									<th>
-										<div style="text-align: center; width:auto;">
-											<p>Bạn có chắc chắn muốn xóa?</p>
-										</div>
-									</th>
-								</tr>
-								<tr>
-									<td><button type="button" onclick="document.getElementById('noti').style.display='none'" class="btn btn-danger btn-xs">
-											<div style="width: 70px; height:20px; text-align: center;">Có</div>
-										</button></td>
-									<td><button type="button" onclick="document.getElementById('noti').style.display='none'" class="btn btn-info btn-xs">
-											<div style="width: 70px; height:20px; text-align: center;">Không</div>
-										</button></td>
-								</tr>
-							</table>
+							<div class=" row clearfix">
+								<div class="col-md-6">
+									<div class="form-group">
+										<button type="submit" id="<?php $u['IdUser'] ?>" class="btn btn-danger">
+											<div style="width: 122px; height:20px; text-align: center;">Có</div>
+										</button>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<button type="button" onclick="document.getElementById('noti').style.display='none'" class="btn btn-info">
+											<div style="width: 122px; height:20px; text-align: center;">Không</div>
+										</button>
+									</div>
+								</div>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -82,3 +85,8 @@
 		</div>
 	</div>
 </div>
+
+
+<script>
+	
+</script>
