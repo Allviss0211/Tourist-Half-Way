@@ -425,4 +425,26 @@ class User extends CI_Controller
 
         redirect('home');
     }
+    function forgot()
+    {
+        if (isset($_POST['btnForgot'])) {
+            $username =  $this->input->post('txtUsernameForgot');
+            $user = $this->User_model->check_user($username);
+            if($user != '')
+            {
+                $passwordplain  = rand(1000000,99999999);
+                $user['Password'] = $passwordplain;
+                $this->User_model->update_password($username,$user['Password']);
+                mail($user['Email'],"Mật khẩu mới","Mật khẩu mới của bạn đã được cập nhật thành ".$passwordplain);
+                $this->session->set_flashdata('error_forgot_message','Một mật khẩu mới đã được gửi về email của bạn');
+                redirect('user/login');
+            }
+            else
+            {
+                $this->session->set_flashdata('error_forgot_message','Tài khoản không tồn tại');
+                redirect('user/login');
+            }
+        } else
+            $this->load->view("user/login");
+    }   
 }

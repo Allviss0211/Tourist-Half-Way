@@ -38,39 +38,35 @@
 							<td><?php echo $u['Note']; ?></td>
 							<td>
 								<a href="<?php echo site_url('user/edit/' . $u['IdUser']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Sửa</a>
-								<button onclick="document.getElementById('noti').style.display='block'" style="width:auto;" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Xóa</button>
+								<a href="<?php echo site_url('user/remove/' . $u['IdUser']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Xóa</a>
+								<!-- <button onclick="document.getElementById('noti').style.display='block'" style="width:auto;" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Xóa</button> -->
 							</td>
 						</tr>
+						
 					<?php } ?>
+
 				</table>
-			</div>
-		</div>
-	</div>
-</div>
-<div id="noti" class="noti">
-					<form class="noti-content animate" action="" style="width: 350px; height: 105px;">
-						<div class="box-header">
-							<div style="text-align: center; width:auto;">
-								<p>Bạn có chắc chắn muốn xóa?</p>
-							</div>
-						</div>
+				<!-- <div id="noti" class="noti">
+					<form class="noti-content animate" action="" style="width: 350px; height: 100px;">
 						<div class="box-body">
-							<div class=" row clearfix">
-								<div class="col-md-6">
-									<div class="form-group">
-										<a href="<?php echo site_url('user/remove/' . $u['IdUser']); ?>" class="btn btn-danger">
-											<div style="width: 122px; height:20px; text-align: center;">Có</div>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<button type="button" onclick="document.getElementById('noti').style.display='none'" class="btn btn-info">
-											<div style="width: 122px; height:20px; text-align: center;">Không</div>
-										</button>
-									</div>
-								</div>
-							</div>
+
+							<table class="table table-striped">
+								<tr>
+									<th>
+										<div style="text-align: center; width:auto;">
+											<p>Bạn có chắc chắn muốn xóa?</p>
+										</div>
+									</th>
+								</tr>
+								<tr>
+									<td><a type="button" onclick="document.getElementById('noti').style.display='none'" href="<?php echo site_url('user/remove/' . $u['IdUser']); ?>" class="btn btn-danger btn-xs">
+											<div style="width: 70px; height:20px; text-align: center;">Có</div>
+										</a></td>
+									<td><button type="button" onclick="document.getElementById('noti').style.display='none'" class="btn btn-info btn-xs">
+											<div style="width: 70px; height:20px; text-align: center;">Không</div>
+										</button></td>
+								</tr>
+							</table>
 						</div>
 					</form>
 				</div>
@@ -85,4 +81,13 @@
 							modal.style.display = "none";
 						}
 					}
-				</script>
+				</script> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	
+</script>
