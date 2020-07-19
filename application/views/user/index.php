@@ -70,6 +70,7 @@
 						</div>
 					</form>
 				</div>
+
 				<script>
 					// Get the modal
 					var modal = document.getElementById('noti');
