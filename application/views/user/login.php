@@ -9,7 +9,10 @@
 </head>
 
 <body>
-    <div class="wrapper fadeInDown">
+    <div class="wrapper fadeInDown"> 
+        <p class="error_container" style="display: <?php echo isset($_SESSION['error_login_message']) ? "block" : "none" ?>;"><?php echo $this->session->flashdata('error_login_message'); ?></p>
+        <p class="error_container" style="display: <?php echo isset($_SESSION['error_signup_message']) ? "block" : "none" ?>;"><?php echo $this->session->flashdata('error_signup_message'); ?></p>
+        <p class="error_container" style="display: <?php echo isset($_SESSION['error_forgot_message']) ? "block" : "none" ?>;"><?php echo $this->session->flashdata('error_forgot_message'); ?></p>
         <div id="formContent">
             <!-- Tabs Titles -->
             <script>
@@ -23,9 +26,9 @@
                     document.getElementById($tag).className = 'inactive underlineHover';
                 }
             </script>
-            <h2 id='tagSignIn' class="active" onclick="active('signIn','tagSignIn'),inactive('signUp','tagSignUp')" style="display: inline-block;"> Đăng nhập </h2>
-            <h2 id='tagSignUp' class="inactive underlineHover" onclick="active('signUp','tagSignUp'),inactive('signIn','tagSignIn')" style="display: inline-block;"> Đăng ký </h2>
-
+            <h2 id='tagSignIn' class="active" onclick="active('signIn','tagSignIn'),inactive('signUp','tagSignUp'),inactive('forgot','tagForgot')" style="display: inline-block;"> Đăng nhập </h2>
+            <h2 id='tagSignUp' class="inactive underlineHover" onclick="active('signUp','tagSignUp'),inactive('signIn','tagSignIn'),inactive('forgot','tagForgot')" style="display: inline-block;"> Đăng ký </h2>
+            <h2 id='tagForgot' class="inactive underlineHover" onclick="active('forgot','tagForgot'),inactive('signIn','tagSignIn'),inactive('signUp','tagSignUp')" style="display: inline-block;"> Quên mật khẩu </h2>
 
             <div id="signIn" style="display: block;">
                 <!-- Icon -->
@@ -38,15 +41,7 @@
                     <input type="text" id="txtUsername" class="fadeIn second text" name="txtUsername" placeholder="Tên đăng nhập">
                     <input type="password" id="txtPassword" class="fadeIn third password" name="txtPassword" placeholder="Mật khẩu">
                     <input type="submit" name="btnLogin" class="fadeIn fourth" value="Đăng nhập">
-                    <p class="error_container"><?php echo $this->session->flashdata('error_login_message'); ?></p>
-                    <p class="error_container"><?php echo $this->session->flashdata('error_signup_message'); ?></p>
                 </form>
-
-                <!-- Remind Passowrd -->
-                <div id="formFooter">
-                    <a class="underlineHover" href="#">Forgot Password?</a>
-                </div>
-                <!-- signUp form -->
             </div>
             <div id="signUp" style="display: none;">
                 <!-- Icon -->
@@ -67,6 +62,20 @@
                     <input type="text" id="txtAddress" class="fadeIn first text" name="txtAddress" placeholder="Địa chỉ *">
                     <input type="submit" name="btnSignUp" class="fadeIn second" value="Đăng ký">
                 </form>
+            </div>
+            <div id="forgot" style="display: none;">
+                <div class="fadeIn first">
+                    <img src="/resources/images/Logo_web.png" id="icon" alt="User Icon" />
+                </div>
+                <form method="POST" action="<?php echo base_url("user/forgot") ?>">
+                    <input type="text" id="txtUsernameForgot" class="fadeIn first text" name="txtUsernameForgot" placeholder="Tên đăng nhập của bạn">
+                    <input type="text" id="txtNewPass" style="display: none;" class="fadeIn first text" name="txtNewPass" placeholder="Nhập mật khẩu của bạn">
+                    <input type="text" id="txtRePass" style="display: none;" class="fadeIn first text" name="txtRePass" placeholder="Nhập lại mật khẩu">
+                    <p class="error_container" style="display: none;" id="error_forgot">Tài khoàn không đúng, vui lòng nhập lại</p>
+
+                    <input type="submit" name="btnForgot" class="fadeIn second" value="Quên mật khẩu">
+                </form>
+
             </div>
         </div>
 </body>

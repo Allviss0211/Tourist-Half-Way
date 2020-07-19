@@ -80,7 +80,7 @@ body {
 }
 /* Buttons */
 .btn {
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   border-radius: 3px;
 }
 .btn-sm {
@@ -6591,6 +6591,15 @@ section.lazy-placeholder:after {
   text-align: justify ;
   color: #232323;
 }
+div.scrollmenu{
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu div.card{
+  display: inline-block;
+}
+
 .cid-s0mI4fNCuo {
   padding-top: 15px;
   padding-bottom: 0px;

@@ -72,9 +72,9 @@ class Tour_model extends CI_Model
         return $this->db->delete('tour',array('IdTour'=>$IdTour));
     }
 
-    function count_tour_by_tourtype()
-    {
-        $query = $this->db->query("SELECT COUNT(IF(IdTourType = 1,1,NULL)) as 'Trong nước', COUNT(IF(IdTourType = 2,1,NULL)) as 'Ngoài nước' FROM tour");  
-        return $query->result_array();   
-    }
+    // function count_tour_by_tourtype()
+    // {
+    //     $query = $this->db->query("SELECT COUNT(IF(IdTourType = 1,1,NULL)) as 'Trong nước', COUNT(IF(IdTourType = 2,1,NULL)) as 'Ngoài nước' FROM tour");  
+    //     return $query->result_array();   
+    // }
 }
