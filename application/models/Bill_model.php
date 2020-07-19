@@ -50,4 +50,10 @@ class Bill_model extends CI_Model
     {
         return $this->db->delete('bill',array('IdBill'=>$IdBill));
     }
+
+    function statistic_bill_by_year()
+    {
+        $query = $this->db->query("CALL statisticBillByYear()");
+        return $query->result_array();
+    }
 }

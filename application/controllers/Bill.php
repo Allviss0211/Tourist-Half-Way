@@ -122,4 +122,10 @@ class Bill extends CI_Controller
             redirect("user/login");
         }
     }
+
+    function statistic_bill_by_year()
+    {
+        $data = $this->Bill_model->statistic_bill_by_year();
+        echo json_encode($data);
+    }
 }

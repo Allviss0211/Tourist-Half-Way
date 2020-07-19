@@ -359,5 +359,12 @@ class Tour extends CI_Controller
 
     }
 
+    function count_tour() 
+    {
+        $data = $this->Tour_model->count_tour_by_tourtype();
+        echo json_encode($data);
+    }
+
+
 }
 
